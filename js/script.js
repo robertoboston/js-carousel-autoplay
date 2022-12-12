@@ -137,15 +137,26 @@ function autoPlay (){
 
 }
 
-setInterval(autoPlay,2500)
+let myAuto;
 
-
+const playAuto = document.getElementById('play')
 const stopAutoPlay = document.getElementById('stop')
 
+playAuto.addEventListener('click',function(){
+    myAuto=setInterval(autoPlay,1000)
+        
+})
 
 stopAutoPlay.addEventListener('click',function(){
-    clearInterval(autoPlay)
+    clearInterval(myAuto)
 })
+
+
+
+
+
+
+
 
 
 

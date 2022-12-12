@@ -90,4 +90,5 @@
 
 .play, .stop{
     padding: 20px 50px;
+    cursor: pointer;
 }
