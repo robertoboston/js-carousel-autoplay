@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .slider{
@@ -81,4 +82,12 @@
 
 .hidden{
     display: none;
+}
+
+.btn-position{
+    margin-top:100px
+}
+
+.play, .stop{
+    padding: 20px 50px;
 }

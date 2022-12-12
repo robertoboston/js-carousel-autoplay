@@ -57,13 +57,18 @@ next.addEventListener('click', function(){
         // AGGIUNGERE LA CLASSE ACTIVE AL NUOVO ELEMENTO (QUELLO SUCCESSIVO)
         items[itemActive].classList.add('active')
         circles[itemActive].classList.add('active')
-
-        prev.classList.remove('hidden')
-        if(itemActive === items.length -1){
-            next.classList.add('hidden')
-        }
-        
     
+    }
+    else{
+        items[itemActive].classList.remove('active')
+        circles[itemActive].classList.remove('active')
+
+        itemActive = 0
+
+        items[itemActive].classList.add('active')
+        circles[itemActive].classList.add('active')
+
+
     }
 
   
@@ -85,14 +90,71 @@ prev.addEventListener('click', function(){
         items[itemActive].classList.add('active')
         circles[itemActive].classList.add('active')
 
-        next.classList.remove('hidden')
-        if(itemActive == 0){
-            prev.classList.add('hidden')
-        }
+
+    }
+    else{
+        items[itemActive].classList.remove('active')
+        circles[itemActive].classList.remove('active')
+
+        itemActive = 4
+
+        items[itemActive].classList.add('active')
+        circles[itemActive].classList.add('active')
 
     }
 
 
 })
+
+function autoPlay (){
+
+    if(itemActive < items.length -1){
+
+        // RIMUOVO LA CLASSE ACTIVE NEGLI ELEMENTI ATTUALMENTE VISIBILI
+        items[itemActive].classList.remove('active')
+        circles[itemActive].classList.remove('active')
+
+        // ESEGUO INCREMENTO
+        itemActive++;
+
+        // AGGIUNGERE LA CLASSE ACTIVE AL NUOVO ELEMENTO (QUELLO SUCCESSIVO)
+        items[itemActive].classList.add('active')
+        circles[itemActive].classList.add('active')
+    
+    }
+    else{
+        items[itemActive].classList.remove('active')
+        circles[itemActive].classList.remove('active')
+
+        itemActive = 0
+
+        items[itemActive].classList.add('active')
+        circles[itemActive].classList.add('active')
+
+
+    }
+
+
+}
+
+setInterval(autoPlay,2500)
+
+
+const stopAutoPlay = document.getElementById('stop')
+
+
+stopAutoPlay.addEventListener('click',function(){
+    clearInterval(autoPlay)
+})
+
+
+
+    
+
+
+
+
+
+
 
 
