@@ -89,6 +89,28 @@
 }
 
 .play, .stop{
-    padding: 20px 50px;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: coral;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    color: black;
+    margin: 30px;
+}
+
+.play:hover, .stop:hover {
+    background-color: rgb(168, 56, 16)
+}
+
+.play:active, stop:active {
+  background-color: rgb(168, 56, 16);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
